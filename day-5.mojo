@@ -44,5 +44,4 @@ def main():
     for char in password_list:
         password += char
 
-    print("Your password is: " + password)
-
+    print("Your password is:", password)

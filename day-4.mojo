@@ -1,4 +1,4 @@
-from python import Python
+from python import Python, PythonObject
 
 def main():
     random = Python.import_module("random")
@@ -30,15 +30,14 @@ def main():
     ---.__(___)
     '''
 
-    game_images = [rock, paper, scissors]
+    var game_images: PythonObject = [rock, paper, scissors]
 
     user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+
     print(game_images[user_choice])
 
     computer_choice = random.randint(0, 2)
-    print("Computer chose:")
-    print(game_images[computer_choice])
-
+    print("Computer chose:", game_images[computer_choice])
 
     if user_choice >= 3 or user_choice < 0:
         print("You typed an invalid number, you lose!")
